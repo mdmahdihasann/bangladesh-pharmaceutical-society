@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
 import { events } from "@/data/content";
-import { img, photos } from "@/data/site";
+import { img, photos, siteConfig } from "@/data/site";
 import { EventRow } from "@/components/cards/EventRow";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
@@ -32,7 +32,7 @@ export default function EventsPage() {
       ? "https://schema.org/OnlineEventAttendanceMode"
       : "https://schema.org/OfflineEventAttendanceMode",
     location: e.location.startsWith("Online")
-      ? { "@type": "VirtualLocation", url: "https://www.bps-bd.org/events" }
+      ? { "@type": "VirtualLocation", url: `${siteConfig.url}/events` }
       : { "@type": "Place", name: e.location, address: e.location },
     organizer: { "@type": "Organization", name: "Bangladesh Pharmaceutical Society" },
   }));

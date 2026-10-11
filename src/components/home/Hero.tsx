@@ -68,7 +68,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-950/95 via-brand-900/75 to-brand-900/10" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-brand-950/80 to-transparent" />
 
-      <div className="container-bps flex flex-col justify-center pt-36">
+      <div className="container-bps flex flex-col justify-center pt-40">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={index}
@@ -84,30 +84,30 @@ export function Hero() {
             <motion.h1
               variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="text-4xl leading-[1.05] font-extrabold tracking-tight text-balance text-white sm:text-6xl xl:text-7xl"
+              className="text-3xl leading-[1.15] font-bold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl"
             >
               {slide.title}
             </motion.h1>
             <motion.p
               variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-              className="mt-6 max-w-xl text-lg leading-relaxed text-brand-100 sm:text-xl"
+              className="mt-5 max-w-xl text-base leading-relaxed text-brand-100/90 sm:text-lg"
             >
               {slide.text}
             </motion.p>
             <motion.div
               variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-              className="mt-10 flex flex-wrap gap-4"
+              className="mt-8 flex flex-wrap gap-3"
             >
               <Link
                 href={slide.cta.href}
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-brand-800 transition-all hover:-translate-y-0.5 hover:bg-brand-50"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-800 transition-all hover:-translate-y-0.5 hover:bg-brand-50"
               >
                 {slide.cta.label}
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
               </Link>
               <Link
                 href="/membership"
-                className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-semibold text-white ring-1 ring-white/40 transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/40 transition-colors hover:bg-white/10"
               >
                 Become a member
               </Link>

@@ -30,8 +30,8 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-6 max-w-sm leading-relaxed text-brand-200">
-            The national professional body of pharmacists in Bangladesh, affiliated with the International
-            Pharmaceutical Federation (FIP) and the Commonwealth Pharmacists Association.
+            The national professional body of pharmacists in Bangladesh, working with regional and international
+            pharmacy bodies.
           </p>
           <SocialIcons className="mt-6" iconClassName="size-10 bg-white/10 text-white hover:bg-white hover:text-brand-800" />
         </div>

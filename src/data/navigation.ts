@@ -49,7 +49,7 @@ export const footerNav = {
   ],
   resources: [
     { label: "Events Calendar", href: "/events" },
-    { label: "Bangladesh Pharmaceutical Journal", href: "/publications" },
+    { label: "BPS Pharmaceutical Journal", href: "/publications" },
     { label: "News & Press", href: "/news" },
     { label: "Public Health Resources", href: "/publications#public" },
   ],

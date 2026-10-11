@@ -1,4 +1,5 @@
 import { photos } from "./site";
+import type { IconName } from "@/components/ui/Icon";
 
 export const stats = [
   { value: 54, suffix: "+", label: "Years of service", note: "Founded in 1972" },
@@ -32,7 +33,7 @@ export const pillars = [
   {
     icon: "Microscope",
     title: "Research & Journal",
-    text: "Publishing the Bangladesh Pharmaceutical Journal and fostering research across academia and industry.",
+    text: "Publishing the BPS Pharmaceutical Journal and fostering research across academia and industry.",
     href: "/publications",
     tone: "sun",
   },
@@ -83,9 +84,9 @@ export const councilRoles = [
 
 export const timeline = [
   { year: "1972", title: "Society founded", text: "Established in Dhaka to unite registered pharmacists of the newly independent nation." },
-  { year: "1976", title: "Pharmacy Ordinance", text: "Contributed to the framework that led to the Pharmacy Council of Bangladesh." },
-  { year: "1982", title: "National Drug Policy", text: "Pharmacists played a key role in shaping the landmark National Drug Policy." },
-  { year: "1990s", title: "Journal & international ties", text: "Bangladesh Pharmaceutical Journal grows; affiliations with FIP and CPA strengthen." },
+  { year: "1976", title: "First national seminar", text: "Hosted the first nationwide seminar on pharmacy practice and professional standards." },
+  { year: "1982", title: "Policy advocacy", text: "Members contributed expert input on medicine quality, pricing and access." },
+  { year: "1990s", title: "Journal & international ties", text: "BPS Pharmaceutical Journal grows; ties with international pharmacy bodies strengthen." },
   { year: "2020s", title: "Modern practice", text: "Focus on clinical pharmacy, CPD and digital health for a new generation." },
 ] as const;
 
@@ -102,11 +103,11 @@ export const membershipTiers = [
     name: "Full Member",
     price: "৳2,000",
     period: "per year",
-    text: "For registered pharmacists (Category A) with the Pharmacy Council of Bangladesh.",
+    text: "For registered pharmacists (Category A) with the national pharmacy council.",
     features: [
       "Voting rights at the AGM",
       "Accredited CPD programmes",
-      "Bangladesh Pharmaceutical Journal access",
+      "BPS Pharmaceutical Journal access",
       "Member rates for all events",
       "Divisions & chapters network",
     ],
@@ -125,15 +126,15 @@ export const membershipTiers = [
 export const benefits = [
   { icon: "BadgeCheck", title: "Professional recognition", text: "Be part of the national voice of pharmacists." },
   { icon: "GraduationCap", title: "Accredited CPD", text: "Earn credits through workshops, webinars and seminars." },
-  { icon: "BookOpen", title: "Journal access", text: "Read and publish in the Bangladesh Pharmaceutical Journal." },
+  { icon: "BookOpen", title: "Journal access", text: "Read and publish in the BPS Pharmaceutical Journal." },
   { icon: "Users", title: "Network", text: "Connect with peers across hospitals, industry and academia." },
-  { icon: "Globe", title: "Global exposure", text: "Pathways to FIP and Commonwealth pharmacy events." },
+  { icon: "Globe", title: "Global exposure", text: "Pathways to regional and international pharmacy events." },
   { icon: "Award", title: "Awards & grants", text: "Recognition for excellence and research support." },
 ] as const;
 
 export const applySteps = [
   { title: "Choose a category", text: "Pick Student, Full or Life membership." },
-  { title: "Prepare documents", text: "PCB registration, NID and a recent photograph." },
+  { title: "Prepare documents", text: "Pharmacist registration certificate, NID and a recent photograph." },
   { title: "Submit application", text: "Fill in the form and pay the membership fee." },
   { title: "Get verified", text: "Receive your BPS membership ID within 2–3 weeks." },
 ] as const;
@@ -141,7 +142,7 @@ export const applySteps = [
 export const faqs = [
   {
     q: "Who can become a member of BPS?",
-    a: "Pharmacists registered with the Pharmacy Council of Bangladesh can become Full or Life members. Pharmacy students at recognised universities can join as Student members.",
+    a: "Pharmacists registered with the national pharmacy council can become Full or Life members. Pharmacy students at recognised universities can join as Student members.",
   },
   {
     q: "How long does verification take?",
@@ -231,7 +232,7 @@ export const events: BpsEvent[] = [
     date: "2026-12-12",
     day: "12",
     month: "Dec",
-    location: "Bangabandhu International Conference Center, Dhaka",
+    location: "BPS Convention Hall, Demo Road, Dhaka",
     type: "Conference",
     text: "The flagship annual gathering of pharmacists, policy makers and industry leaders.",
     image: photos.conference,
@@ -242,7 +243,7 @@ export const events: BpsEvent[] = [
     date: "2026-11-21",
     day: "21",
     month: "Nov",
-    location: "Online · Zoom",
+    location: "Online · BPS Live",
     type: "Webinar",
     text: "A national webinar during World AMR Awareness Week on stewardship in practice.",
     image: photos.pipette,
@@ -253,7 +254,7 @@ export const events: BpsEvent[] = [
     date: "2026-11-08",
     day: "08",
     month: "Nov",
-    location: "University of Dhaka, Faculty of Pharmacy",
+    location: "BPS Training Centre, Demo Campus, Dhaka",
     type: "Workshop",
     text: "Case-based learning on medication reviews and therapeutic drug monitoring.",
     image: photos.seminar,
@@ -264,7 +265,7 @@ export const events: BpsEvent[] = [
     date: "2026-10-30",
     day: "30",
     month: "Oct",
-    location: "Chattogram",
+    location: "BPS Regional Office, Demo City",
     type: "Seminar",
     text: "Career pathways, leadership and innovation for early-career pharmacists.",
     image: photos.lectureHall,
@@ -307,7 +308,7 @@ export const news: NewsPost[] = [
     body: [
       "Antimicrobial resistance is one of the most serious public health threats facing Bangladesh. BPS calls on all stakeholders to work together.",
       "The society recommends strict adherence to prescription-only dispensing of antibiotics, continuous pharmacist training and targeted public campaigns.",
-      "BPS stands ready to support the Directorate General of Drug Administration and the Ministry of Health in implementing the national action plan.",
+      "BPS stands ready to support the national drug regulatory and health authorities in implementing the national action plan.",
     ],
   },
   {
@@ -340,18 +341,18 @@ export const news: NewsPost[] = [
   },
 ];
 
-export const partners = [
-  "International Pharmaceutical Federation (FIP)",
-  "Commonwealth Pharmacists Association",
-  "Pharmacy Council of Bangladesh",
-  "Directorate General of Drug Administration",
-  "Bangladesh Association of Pharmaceutical Industries",
-  "Faculties of Pharmacy, Bangladesh",
-] as const;
+export const partners: { name: string; text: string; icon: IconName }[] = [
+  { name: "Divisional Chapters", text: "Local leadership and member services across every division of Bangladesh.", icon: "MapPinned" },
+  { name: "Young Pharmacists Group", text: "Mentoring, networking and leadership for early-career pharmacists.", icon: "Sprout" },
+  { name: "Hospital Pharmacy Division", text: "Clinical practice, medication safety and ward-based pharmaceutical care.", icon: "Hospital" },
+  { name: "Industrial Pharmacy Division", text: "Manufacturing quality, regulatory affairs and GMP excellence.", icon: "Factory" },
+  { name: "Academic & Research Forum", text: "Teaching, research collaboration and scholarly publishing.", icon: "FlaskConical" },
+  { name: "Pharmacy Students' Wing", text: "Bringing students into the profession through events and outreach.", icon: "GraduationCap" },
+];
 
 export const publications = [
   {
-    title: "Bangladesh Pharmaceutical Journal",
+    title: "BPS Pharmaceutical Journal",
     text: "The official peer-reviewed journal of the society, publishing original research, reviews and short communications in pharmaceutical sciences.",
     tag: "Journal",
     image: photos.vials,

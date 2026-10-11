@@ -11,7 +11,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "The Bangladesh Pharmaceutical Journal, BPS newsletter, practice guidelines and public health resources from Bangladesh Pharmaceutical Society.",
+    "The BPS Pharmaceutical Journal, BPS newsletter, practice guidelines and public health resources from Bangladesh Pharmaceutical Society.",
   alternates: { canonical: "/publications" },
 };
 
@@ -50,7 +50,7 @@ export default function PublicationsPage() {
               <FileText className="size-7" aria-hidden />
             </span>
             <div>
-              <h3 className="text-lg font-bold text-brand-900">Submit to the Bangladesh Pharmaceutical Journal</h3>
+              <h3 className="text-lg font-bold text-brand-900">Submit to the BPS Pharmaceutical Journal</h3>
               <p className="text-muted">
                 Original research, reviews and short communications are welcome. Send your enquiry to{" "}
                 <a href={`mailto:${siteConfig.contact.email}`} className="font-semibold text-brand-700 hover:underline">

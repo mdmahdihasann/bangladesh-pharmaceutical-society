@@ -50,9 +50,8 @@ export default function AboutPage() {
               </p>
               <p>
                 Headquartered in Dhaka, the society works to advance pharmacy and to make the role of pharmacists
-                meaningful in the National Health Programme. It publishes the <strong>Bangladesh Pharmaceutical
-                Journal</strong> and is affiliated with the International Pharmaceutical Federation (FIP) and the
-                Commonwealth Pharmacists Association.
+                meaningful in the National Health Programme. It publishes the <strong>BPS Pharmaceutical
+                Journal</strong> and works with regional and international pharmacy bodies.
               </p>
               <p>
                 Today our members serve in community pharmacies, hospitals, a world-class pharmaceutical industry,

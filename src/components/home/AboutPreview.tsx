@@ -7,8 +7,8 @@ import { Counter } from "@/components/ui/Counter";
 import { Reveal } from "@/components/ui/Reveal";
 
 const highlights = [
-  "Affiliated with FIP & the Commonwealth Pharmacists Association",
-  "Publisher of the Bangladesh Pharmaceutical Journal",
+  "Connected with regional & international pharmacy bodies",
+  "Publisher of the BPS Pharmaceutical Journal",
   "Partner in the National Health Programme",
 ];
 

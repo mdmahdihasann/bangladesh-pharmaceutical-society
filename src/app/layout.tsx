@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "pharmacists Bangladesh",
     "pharmacy",
     "CPD pharmacy Bangladesh",
-    "Bangladesh Pharmaceutical Journal",
+    "BPS Pharmaceutical Journal",
     "বাংলাদেশ ফার্মাসিউটিক্যাল সোসাইটি",
   ],
   alternates: { canonical: "/" },

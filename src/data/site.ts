@@ -5,13 +5,13 @@ export const siteConfig = {
   tagline: "Advancing pharmacy. Protecting public health.",
   description:
     "Bangladesh Pharmaceutical Society (BPS) is the national professional body of registered pharmacists in Bangladesh — advancing pharmacy practice, education and research since 1972.",
-  url: "https://www.bps-bd.org",
+  url: "https://www.example.com",
   founded: 1972,
   copyrightYear: 2026,
   contact: {
-    email: "info@bps-bd.org",
-    phone: "+880 2 0000 0000",
-    address: "Dhaka, Bangladesh",
+    email: "info@example.com",
+    phone: "+880 1000 000000",
+    address: "House 00, Road 00, Demo Area, Dhaka, Bangladesh",
     hours: "Sun – Thu, 10:00 AM – 5:00 PM",
   },
   social: {
