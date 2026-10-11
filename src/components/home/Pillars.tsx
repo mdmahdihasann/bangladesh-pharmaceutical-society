@@ -15,7 +15,7 @@ const tones = {
 
 export function Pillars() {
   return (
-    <section className="relative bg-surface py-24 sm:py-32">
+    <section className="relative bg-surface py-20 sm:py-28">
       <div className="container-bps relative">
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading

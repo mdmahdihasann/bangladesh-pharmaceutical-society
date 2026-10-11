@@ -9,29 +9,46 @@ const tones = [
   "bg-sun-400/20 text-brand-900",
 ];
 
-export function Partners() {
-  const loop = [...partners, ...partners];
+type Partner = (typeof partners)[number];
+
+function Row({ items, reverse }: { items: Partner[]; reverse?: boolean }) {
+  const loop = [...items, ...items];
 
   return (
-    <section aria-label="Our divisions and chapters" className="border-y border-line bg-white py-14">
+    <ul
+      className={cn(
+        "flex w-max animate-marquee py-2 group-hover:[animation-play-state:paused] motion-reduce:animate-none",
+        reverse && "[animation-direction:reverse]",
+      )}
+    >
+      {loop.map((p, i) => (
+        <li
+          key={`${p.name}-${i}`}
+          aria-hidden={i >= items.length}
+          className="mr-4 flex shrink-0 items-center gap-3 rounded-2xl bg-surface py-3 pr-6 pl-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-soft"
+        >
+          <span className={cn("grid size-10 place-items-center rounded-xl", tones[partners.indexOf(p) % tones.length])}>
+            <Icon name={p.icon} className="size-5" />
+          </span>
+          <span className="font-semibold whitespace-nowrap text-ink">{p.name}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export function Partners() {
+  const half = Math.ceil(partners.length / 2);
+  const rotated = [...partners.slice(half), ...partners.slice(0, half)];
+
+  return (
+    <section aria-label="Our divisions and chapters" className="bg-white py-20 sm:py-24">
       <p className="text-center text-xs font-semibold tracking-[0.25em] text-muted uppercase">
         Our divisions &amp; chapters
       </p>
-      <div className="group relative mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        <ul className="flex w-max animate-marquee py-2 group-hover:[animation-play-state:paused] motion-reduce:animate-none">
-          {loop.map((p, i) => (
-            <li
-              key={`${p.name}-${i}`}
-              aria-hidden={i >= partners.length}
-              className="mr-4 flex shrink-0 items-center gap-3 rounded-2xl bg-white py-3 pr-6 pl-3 ring-1 ring-line transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft hover:ring-brand-200"
-            >
-              <span className={cn("grid size-10 place-items-center rounded-xl", tones[i % tones.length])}>
-                <Icon name={p.icon} className="size-5" />
-              </span>
-              <span className="font-semibold whitespace-nowrap text-ink">{p.name}</span>
-            </li>
-          ))}
-        </ul>
+      <div className="group mt-8 space-y-2 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <Row items={partners} />
+        <Row items={rotated} reverse />
       </div>
     </section>
   );

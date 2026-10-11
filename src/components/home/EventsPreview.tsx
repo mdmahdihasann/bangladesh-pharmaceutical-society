@@ -9,7 +9,7 @@ export function EventsPreview() {
   const upcoming = [...events].sort((a, b) => a.date.localeCompare(b.date)).slice(0, 3);
 
   return (
-    <section className="py-24 sm:py-32">
+    <section className="pt-20 pb-16 sm:pt-28 sm:pb-20">
       <div className="container-bps grid gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <SectionHeading

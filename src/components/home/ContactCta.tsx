@@ -10,7 +10,7 @@ const channels = [
 
 export function ContactCta() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="pt-6 pb-20 sm:pb-28">
       <div className="container-bps">
         <Reveal className="grid items-center gap-10 rounded-[2rem] bg-surface p-8 ring-1 ring-line sm:p-12 lg:grid-cols-[1.2fr_1fr]">
           <div>

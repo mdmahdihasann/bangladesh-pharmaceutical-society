@@ -14,7 +14,7 @@ const highlights = [
 
 export function AboutPreview() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-20 sm:py-28">
       <div className="container-bps grid items-center gap-16 lg:grid-cols-2">
         <Reveal direction="left" className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:mr-16">
@@ -59,7 +59,7 @@ export function AboutPreview() {
         </div>
       </div>
 
-      <div className="container-bps mt-24">
+      <div className="container-bps mt-20">
         <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-line ring-1 ring-line lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08} className="bg-white p-8 text-center">

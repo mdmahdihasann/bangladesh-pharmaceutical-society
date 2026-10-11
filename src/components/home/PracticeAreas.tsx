@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function PracticeAreas() {
   return (
-    <section className="relative overflow-hidden bg-brand-950 py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-brand-950 py-20 sm:py-28">
       <div className="pointer-events-none absolute -top-32 left-1/3 size-[36rem] rounded-full bg-brand-600/25 blur-3xl" />
       <div className="container-bps relative">
         <SectionHeading

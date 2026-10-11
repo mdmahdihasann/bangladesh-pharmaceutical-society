@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function MembershipCta() {
   return (
-    <section className="py-12">
+    <section className="pb-20 sm:pb-28">
       <div className="container-bps">
         <Reveal>
           <div className="relative isolate overflow-hidden rounded-[2rem] bg-brand-700 px-6 py-16 sm:px-14 sm:py-20">
