@@ -12,15 +12,19 @@ import { QuickLinks } from "@/components/home/QuickLinks";
 export default function HomePage() {
   return (
     <>
+      {/* Who we are */}
       <Hero />
       <QuickLinks />
       <AboutPreview />
+      {/* What we do and where */}
       <Pillars />
       <PracticeAreas />
-      <EventsPreview />
-      <MembershipCta />
-      <NewsPreview />
       <Partners />
+      {/* What's happening */}
+      <EventsPreview />
+      <NewsPreview />
+      {/* Get involved */}
+      <MembershipCta />
       <ContactCta />
     </>
   );

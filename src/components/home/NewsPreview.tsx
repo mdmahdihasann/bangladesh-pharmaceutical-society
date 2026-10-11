@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function NewsPreview() {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="py-20 sm:py-28">
       <div className="container-bps">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading title="Latest from the society" />
