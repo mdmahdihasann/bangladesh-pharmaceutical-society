@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bangladesh Pharmaceutical Society — Website
 
-## Getting Started
+The website for Bangladesh Pharmaceutical Society (BPS). It is a frontend-only site built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS v4** and **Motion**.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run start    # serve the production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├─ app/                    # Routes (App Router)
+│  ├─ page.tsx             # Home
+│  ├─ about/               # History, mission, council, chapters
+│  ├─ membership/          # Benefits, tiers, steps, FAQ (FAQPage JSON-LD)
+│  ├─ education/           # CPD programmes
+│  ├─ events/              # Events calendar (Event JSON-LD)
+│  ├─ publications/        # Journal, newsletter, public resources
+│  ├─ news/ & news/[slug]  # Newsroom + statically generated articles
+│  ├─ contact/             # Contact form (mailto, no backend)
+│  ├─ sitemap.ts, robots.ts, manifest.ts, icon.jpg
+│  └─ globals.css          # Design tokens (brand colours from the logo)
+├─ components/
+│  ├─ layout/              # Header, Footer
+│  ├─ home/                # Home page sections
+│  ├─ cards/               # NewsCard, EventRow
+│  ├─ contact/             # ContactForm (client)
+│  └─ ui/                  # Reveal, Counter, Button, PageHero, SectionHeading…
+├─ data/                   # ALL site content lives here
+│  ├─ site.ts              # Name, contact info, social links, photo IDs
+│  ├─ navigation.ts        # Header & footer menus
+│  └─ content.ts           # Stats, events, news, tiers, FAQs, CPD…
+└─ lib/utils.ts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+Site text lives in `src/data/`. To add a news article, append an entry to `news` in `content.ts`. Its page under `/news/<slug>` is generated at build time and added to the sitemap.
 
-To learn more about Next.js, take a look at the following resources:
+**Before launch, replace these placeholder values with official details:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `site.ts`: the phone number, full street address and social media URLs
+- `content.ts`: the member statistics, membership fees, Executive Council names (only the roles are shown now), and the sample events and news
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Theme
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The brand colours come from the BPS logo (royal blue `#25309b`). They are defined as Tailwind tokens (`brand-50` … `brand-950`) in `src/app/globals.css`, along with three small accent colours (`aqua`, `rose-brand` and `sun`). Photos are real images from Unsplash, served through `next/image`.
